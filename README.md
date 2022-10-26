@@ -17,7 +17,7 @@ We will also address an issue that was brought to light by the school board wher
 
 ### Academic Dishonesty
 
-As stated before, we will clean the data and disregard grades due to academic dishonesty. We replaced the ninth graders' math and reading scores from Thomas High School and this can be seen the the updated analysis.
+As stated before, we will clean the data and disregard grades due to academic dishonesty. We replaced the ninth graders' math and reading scores from Thomas High School and this can be seen the updated analysis.
 
 ```
 student_data_df.loc[(student_data_df["school_name"] == "Thomas High School") & (student_data_df["grade"] == "9th"), ["reading_score"]] = np.nan
@@ -48,7 +48,7 @@ In the school district summary, we analyzed general information about all school
 | :-----------: | :------------: | :------------: | :----------------: | :-------------------: | :------------: | :---------------: | :---------------: |
 | 15            | 39,170         | $24,649,428.00 | 78.9               | 81.9                  | 74.8           | 85.7              | 64.9              |
 
-As we can see, removing the data for academic dishonesty did not impact the school district summary. This is due to the analysis not focusing on one particular student and is accounting for the overall school district. There were slight changes in the `Average Math Score`, `% Passing Math`, `% Passing Reading`, and `% Overall Passing`. 
+As we can see, removing the data for academic dishonesty did not impact the school district summary. This is due to the analysis not focusing on one student and accounting for the overall school district. There were slight changes in the `Average Math Score`, `% Passing Math`, `% Passing Reading`, and `% Overall Passing`. 
 
 ### School Summary
 
@@ -73,7 +73,7 @@ In the school summary, we analyzed the general information of individual schools
 ![Updated Summary](https://user-images.githubusercontent.com/29410712/183518485-15044c5e-e320-4b15-ac9f-93e2229ad123.png)
 
 
-As we can see, replacing the data for academic dishonesty to `NaN` did impact the school summary. Specifically the row for Thomas High School. By including the data for academic dishonesty, we can see that the scores were much higher for the `% Passing Math`, `% Passing Reading`, and `% Overall Passing`. With the data excluded, the passing scores are lower. 
+As we can see, replacing the data for academic dishonesty with `NaN` did impact the school summary. Specifically the row for Thomas High School. By including the data for academic dishonesty, we can see that the scores were much higher for the `% Passing Math`, `% Passing Reading`, and `% Overall Passing`. With the data excluded, the passing scores are lower. 
 
 ### Top 5 Schools
 
@@ -119,7 +119,7 @@ Replacing the scores affects the math and reading scores by grade. The data simp
 
 ![Spending Summary](https://user-images.githubusercontent.com/29410712/183523492-29795ba2-ca7d-4f58-9efe-70f555e3109f.png)
 
-Since we only replaced math and reading scores, school spending remains the same. Thomas High School spending ranges is still between $630 - $644.
+Since we only replaced math and reading scores, school spending remains the same. Thomas High School’s spending range is still between $630 - $644.
 
 ### Scores by School Size
 
@@ -129,7 +129,7 @@ Since we only replaced math and reading scores, school spending remains the same
 
 ![Size Summary](https://user-images.githubusercontent.com/29410712/183523692-bd7db97f-d6d8-465b-aa79-185da3c03688.png)
 
-Again, since we only replaced math and reading scores, school size also remains the same. Thomas High School school size remains in the Medium Range (1000 - 2000).
+Again, since we only replaced math and reading scores, school size also remains the same. Thomas High School’s size remains in the Medium Range (1000 - 2000).
 
 ### Scores by School Type
 
@@ -142,8 +142,9 @@ Finally, we analyzed the scores for school type. There was no impact on these sc
 Based on these results, there are many changes to the school district analysis after we addressed the issue that was brought to light by the school board wherein there is evidence of academic dishonesty. Some major changes are:
 
 + Replacing the 9th grade values brought average scores lower for Thomas High School due to the inclusion of `NaN` values in the data set. By looking at just the 10th - 12th grade data, the averages were higher.
-+ By removing the 9th grade data, Thomas High School was a high performing school once more. 
-+ The `% Passing Math` increased from 66.9% to 93% with only analyzing 10th - 12th grade data.
-+ The `% Passing Reading` increased from 69.6% to 97% with only analyzing 10th - 12th grade data.
-+ The `% Overall Passing` increased from 65% to 90% with only analyzing 10th - 12th grade data.
++ By removing the 9th grade data, Thomas High School was a high-performing school once more. 
++ The `% Passing Math` increased from 66.9% to 93% by only analyzing 10th - 12th grade data.
++ The `% Passing Reading` increased from 69.6% to 97% by only analyzing 10th - 12th grade data.
++ The `% Overall Passing` increased from 65% to 90% by only analyzing 10th - 12th grade data.
+
 
